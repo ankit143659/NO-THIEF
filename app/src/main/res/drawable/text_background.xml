@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused State -->
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="#313F9A" /> <!-- Darker color when focused -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Default State -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="90"
+                android:endColor="#6C140D"
+                android:startColor="#CD7F1D" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</selector>
