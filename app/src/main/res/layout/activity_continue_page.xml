@@ -20,7 +20,7 @@
        android:layout_height="wrap_content"
        android:orientation="vertical"
        android:gravity="center"
-       android:layout_marginBottom="40dp"
+       android:layout_marginBottom="70dp"
        android:layout_alignParentBottom="true"
        android:id="@id/imageView">
        <Button
@@ -30,7 +30,7 @@
            android:backgroundTint="#FB7400"
            android:elevation="2dp"
            android:text="LOGIN"
-           android:textColor="#FFFFFF"
+           android:textColor="#000000"
            android:textSize="18sp" />
 
        <Button
@@ -40,8 +40,7 @@
            android:layout_marginTop="10dp"
            android:backgroundTint="#F87303"
            android:text="SIGN UP"
-           android:onClick="registration"
-           android:textColor="#FFFFFF"
+           android:textColor="#000000"
            android:textSize="18sp" />
 
    </LinearLayout>
