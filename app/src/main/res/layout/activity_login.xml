@@ -113,7 +113,7 @@
         android:textSize="14sp" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonLogin"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@id/checkBoxRememberMe"
@@ -128,7 +128,7 @@
         android:id="@+id/textViewLoginPrompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonRegister"
+        android:layout_below="@id/buttonLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:text="Don't have an account? "
@@ -139,10 +139,10 @@
         android:id="@+id/textViewsignupp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonRegister"
+        android:layout_below="@id/buttonLogin"
         android:layout_toEndOf="@id/textViewLoginPrompt"
         android:layout_marginTop="5dp"
         android:text="Sign Up"
-        android:textColor="#FC7300"
+        android:textColor="@color/white"
         android:textSize="14sp" />
 </RelativeLayout>

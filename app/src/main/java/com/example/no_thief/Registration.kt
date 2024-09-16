@@ -18,6 +18,7 @@ class Registration : AppCompatActivity() {
         login.setOnClickListener {
             val i = Intent(this,Login::class.java)
             startActivity(i)
+            finish()
         }
 
     }

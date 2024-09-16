@@ -7,8 +7,15 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+
+
+
+
 
     <application
         android:allowBackup="true"
@@ -20,6 +27,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NO_THIEF"
         tools:targetApi="31">
+        <activity
+            android:name=".HOMEPAGE"
+            android:exported="false" />
+
+        <service
+            android:name=".ForegroundService"
+            android:foregroundServiceType="location"
+            android:exported="false"/>
+
+        <receiver android:name=".PowerButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".PowerButtonPressed"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location"/>
+
         <activity
             android:name=".Login"
             android:exported="false" />
@@ -34,7 +64,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

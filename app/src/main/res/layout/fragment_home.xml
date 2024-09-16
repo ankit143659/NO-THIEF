@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".home">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:id="@+id/header_title"
+        android:paddingTop="30dp"
+        android:paddingBottom="5dp"
+        android:textSize="18sp"
+        android:background="@color/orange"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="HOME" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/auth"
+        android:layout_below="@id/header_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
+        android:text="Complete Authentication"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

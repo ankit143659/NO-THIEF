@@ -3,6 +3,7 @@ package com.example.no_thief
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,11 @@ class Login : AppCompatActivity() {
         val signUp =findViewById<TextView?>(R.id.textViewsignupp).setOnClickListener{
             val i = Intent(this,Registration::class.java)
             startActivity(i)
+        }
+        val login = findViewById<Button>(R.id.buttonLogin).setOnClickListener{
+            val i = Intent(this,HOMEPAGE::class.java)
+            startActivity(i)
+            finish()
         }
     }
 }

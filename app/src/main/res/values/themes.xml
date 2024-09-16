@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.NO_THIEF" parent="Base.Theme.NO_THIEF" />
+
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@android:color/black</item>
+        <item name="itemTextColor">@android:color/black</item>
+    </style>
+
 </resources>
