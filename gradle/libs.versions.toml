@@ -1,7 +1,12 @@
 [versions]
+activityKtx = "1.9.2"
 agp = "8.6.0"
+androidxBiometricBiometric = "1.2.0-alpha03"
 biometric = "1.2.0-alpha05"
+coreKtxVersion = "1.11.0"
+faceDetection = "17.0.5"
 firebaseBom = "33.3.0"
+fragmentKtx = "1.8.3"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -14,10 +19,20 @@ constraintlayout = "2.1.4"
 navigationFragment = "2.8.0"
 navigationUiKtx = "2.8.0"
 lifecycleService = "2.8.5"
+tensorflowLite = "2.11.0"
+playServicesMlkitFaceDetection = "17.1.0"
+tensorflowLiteGpu = "2.11.0"
+tensorflowLiteSupport = "0.4.0"
 
 [libraries]
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
+androidx-biometric-biometric-v120alpha03-x2 = { module = "androidx.biometric:biometric", version.ref = "androidxBiometricBiometric" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx-v1110 = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
+face-detection = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
+face-mesh = { module = "com.google.mlkit:face-mesh", version.ref = "faceDetection" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
@@ -32,6 +47,10 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-lifecycle-service = { group = "androidx.lifecycle", name = "lifecycle-service", version.ref = "lifecycleService" }
+tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
+play-services-mlkit-face-detection = { group = "com.google.android.gms", name = "play-services-mlkit-face-detection", version.ref = "playServicesMlkitFaceDetection" }
+tensorflow-lite-gpu = { module = "org.tensorflow:tensorflow-lite-gpu", version.ref = "tensorflowLiteGpu" }
+tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

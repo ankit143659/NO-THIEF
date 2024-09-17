@@ -2,20 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
-
-
-
-
+    <uses-permission android:name="android.permission.CAMERA"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="30"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -27,29 +23,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NO_THIEF"
         tools:targetApi="31">
+
+        <!-- Activities -->
         <activity
             android:name=".HOMEPAGE"
             android:exported="false" />
-
-        <service
-            android:name=".ForegroundService"
-            android:foregroundServiceType="location"
-            android:exported="false"/>
-
-        <receiver android:name=".PowerButtonReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.SCREEN_OFF"/>
-                <action android:name="android.intent.action.SCREEN_ON"/>
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".PowerButtonPressed"
-            android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="location"/>
-
         <activity
             android:name=".Login"
             android:exported="false" />
@@ -67,6 +45,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Receivers -->
+        <receiver
+            android:name=".ScreenActionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Services -->
+        <service
+            android:name=".ScreenActionService"
+            android:exported="true"
+            android:permission="android.permission.FOREGROUND_SERVICE" />
+
     </application>
 
 </manifest>
