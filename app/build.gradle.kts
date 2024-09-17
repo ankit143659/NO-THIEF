@@ -36,30 +36,40 @@ android {
 }
 
 dependencies {
-
+    // Core libraries
     implementation(libs.androidx.core.ktx)
-    implementation (libs.androidx.biometric.biometric.v120alpha03.x2)
-    implementation (libs.androidx.activity.ktx)
-    implementation (libs.androidx.fragment.ktx)
-    implementation (libs.androidx.core.ktx.v1110)
     implementation(libs.androidx.appcompat)
-    implementation(libs.face.detection)
-    implementation(libs.face.mesh)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
+
+    // Biometric library
+    implementation(libs.androidx.biometric.biometric.v120alpha03.x2)
+
+
+    // TensorFlow Lite
     implementation(libs.tensorflow.lite)
     implementation(libs.tensorflow.lite.gpu)
     implementation(libs.tensorflow.lite.support)
+
+    // Material Design
     implementation(libs.material)
-    implementation(libs.androidx.biometric)
+
+    // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.storage.ktx)
-    implementation(libs.androidx.activity)
+
+    // Navigation and Lifecycle
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.lifecycle.service)
+
+    // ML Kit
     implementation(libs.play.services.mlkit.face.detection)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
