@@ -19,27 +19,6 @@
         android:layout_height="wrap_content"
         android:text="HOME" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/auth"
-        android:layout_below="@id/header_title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/orange"
-        android:textColor="@color/black"
-        android:text="Complete Authentication"
-        android:textSize="18sp"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/check"
-        android:layout_below="@id/auth"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/orange"
-        android:textColor="@color/black"
-        android:text="Check user"
-        android:textSize="18sp"
-        android:layout_height="wrap_content" />
+
 
 </RelativeLayout>
